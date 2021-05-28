@@ -10,7 +10,8 @@
   "author": "Manav Patnaik",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.12.11"
   },
   "devDependencies": {
     "colors": "^1.4.0",
