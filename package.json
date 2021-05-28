@@ -1,12 +1,20 @@
 {
   "name": "notes-node-api",
   "version": "1.0.0",
-  "description": "Backend REST API for note taking app",
+  "description": "Backend REST API for a Note taking app",
   "main": "index.js",
   "scripts": {
     "start": "node index",
     "dev": "nodemon index"
   },
   "author": "Manav Patnaik",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "morgan": "^1.10.0"
+  }
 }
