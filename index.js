@@ -18,3 +18,7 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`.blue));
+app.get("/", function (req,res){
+	  res.send(`Hello, ${req.ip}!`)
+	console.log(`Request from ${req.ip}`)
+})
