@@ -1,0 +1,12 @@
+{
+  "name": "notes-node-api",
+  "version": "1.0.0",
+  "description": "Backend REST API for note taking app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "author": "Manav Patnaik",
+  "license": "MIT"
+}
