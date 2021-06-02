@@ -23,7 +23,8 @@ exports.signIn = asyncHandler(async(req,res) => {
     if(!user || !user.comparePassword(req.body.password)) 
     return next(new ErrorResponse("Authentication failure", 401)); 
   }
-  return res.json({
-    //How do I return?
-  })
+  
+  res
+      .status(200)
+      .send()
 })
