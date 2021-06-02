@@ -29,6 +29,12 @@ UserSchema.pre("save", async function () {
   this.password = await bcrpyt.hash(this.password, salt);
 });
 
+
+UserSchema.methods.comparePassword = function(password) {
+  return bcrpyt.compareSync(password,this.password)
+}
+
 const User = mongoose.model("User", UserSchema);
 
 module.exports = User;
+
