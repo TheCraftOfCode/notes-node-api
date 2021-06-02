@@ -1,8 +1,8 @@
 const ErrorResponse = require("../utils/ErrorResponse");
 
 const errorHandler = (err, req, res, next) => {
-  const error = { ...err };
-  error.message = err;
+  let error = { ...err };
+  error.message = err.message;
 
   if (err.name === "ValidationError") {
     const message = Object.values(err.errors).map((val) => val.message);
