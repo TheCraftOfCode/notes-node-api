@@ -6,7 +6,7 @@ const connectDB = require("./config/db");
 const errorHandler = require("./middleware/error");
 
 // Routes
-// const notes = require("./routes/notes");
+const notes = require("./routes/notes");
 const userRoutes = require("./routes/user");
 
 // Dev environment configuration
@@ -25,7 +25,7 @@ const app = express();
 app.use(express.json());
 
 // Routes Middleware
-// app.use("/api/notes", notes);
+app.use("/api/notes", notes);
 app.use("/api/auth", userRoutes);
 app.use(errorHandler);
 

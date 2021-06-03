@@ -8,5 +8,5 @@ exports.getNotes = async (req, res) => {
 exports.createNote = async (req, res) => {
   const note = new Note(req.body);
   await note.save();
-  res.status(201).json(note);
+  res.status(201).json({ note });
 };
