@@ -12,7 +12,7 @@ const authenticateUser = (req, res, next) => {
   try {
     user = jwt.verify(token, process.env.JWT_SECRET);
   } catch (error) {
-    next(new ErrorResponse("Access Denied - Invalid Token"));
+    next(new ErrorResponse("Access Denied - Invalid Token", 401));
   }
 
   req.user = user;
