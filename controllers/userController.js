@@ -12,7 +12,11 @@ exports.registerUser = asyncHandler(async (req, res, next) => {
 
   res
     .status(201)
-    .send({ success: true, message: "User created successfully" });
+    .send({
+      success: true,
+      message: "User created successfully",
+      user: createdUser.email,
+    });
 });
 
 exports.signIn = asyncHandler(async (req, res, next) => {
