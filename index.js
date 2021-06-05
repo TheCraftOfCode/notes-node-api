@@ -6,7 +6,7 @@ const connectDB = require("./config/db");
 const errorHandler = require("./middleware/error");
 
 // Routes
-const notes = require("./routes/notes");
+const noteRoutes = require("./routes/notes");
 const userRoutes = require("./routes/user");
 
 // Dev environment configuration
@@ -25,7 +25,7 @@ const app = express();
 app.use(express.json());
 
 // Routes Middleware
-app.use("/api/notes", notes);
+app.use("/api/notes", noteRoutes);
 app.use("/api/auth", userRoutes);
 app.use(errorHandler);
 
@@ -36,4 +36,3 @@ app.get("/", function (req, res) {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`.blue));
-
