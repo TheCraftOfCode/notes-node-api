@@ -9,9 +9,9 @@ exports.getNotes = asyncHandler(async (req, res) => {
 
 exports.createNote = asyncHandler(async (req, res) => {
   const _note = new Note(req.body);
-  note.user = req.user.id;
+  _note.user = req.user.id;
   await _note.save();
-  res.status(201).json({ note });
+  res.status(201).json({ _note });
 });
 
 exports.deleteNote = asyncHandler(async (req, res) => {
