@@ -1,6 +1,5 @@
 const express = require("express");
 const colors = require("colors");
-const dotenv = require("dotenv");
 const morgan = require("morgan");
 const connectDB = require("./config/db");
 const errorHandler = require("./middleware/error");
@@ -11,8 +10,9 @@ const noteRoutes = require("./routes/notes");
 const userRoutes = require("./routes/user");
 
 // Dev environment configuration
-dotenv.config();
 if (process.env.NODE_ENV === "development") {
+  const dotenv = require("dotenv");
+  dotenv.config();
   morgan("tiny");
 }
 
