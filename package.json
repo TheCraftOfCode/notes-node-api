@@ -4,7 +4,7 @@
   "description": "Backend REST API for a Note taking app",
   "main": "index.js",
   "scripts": {
-    "start": "node index",
+    "start": "NODE_ENV=development node index",
     "dev": "nodemon index"
   },
   "author": "Manav Patnaik",
@@ -15,10 +15,9 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.12.11"
-  },
-  "devDependencies": {
+    "mongoose": "^5.12.11",
     "dotenv": "^10.0.0",
     "morgan": "^1.10.0"
-  }
+  },
+  "devDependencies": {}
 }
