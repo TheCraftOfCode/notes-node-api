@@ -10,6 +10,11 @@ const NoteSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please provide note content"],
   },
+  category: {
+    type: String,
+    enum: ["todo", "note", "important"],
+    required: [true, "Please provide a category"],
+  },
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
